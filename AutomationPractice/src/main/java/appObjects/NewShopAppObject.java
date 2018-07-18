@@ -11,8 +11,11 @@ public class NewShopAppObject {
 	public NewShopAppObject(WebDriver driver) {
 		this.driver = driver;
 	}
-	public WebElement getAddDressToCartButton() {
-		return this.driver.findElement(By.xpath("//*[@id=\"homefeatured\"]/li[5]/div/div[2]/div[2]/a[1]"));	
+	public WebElement getDressButton() {
+		return this.driver.findElement(By.xpath("//*[@id=\"homefeatured\"]/li[5]/div/div[1]/div/a[1]/img"));	
+	}
+		public WebElement getAddDressToCartButton() {
+		return this.driver.findElement(By.xpath("//*[@id=\"add_to_cart\"]/button"));	
 	}
 	public WebElement getProceedToCheckoutButton1() {
 		return this.driver.findElement(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a"));	

@@ -10,6 +10,9 @@ public class NewShopTask {
 	public NewShopTask (WebDriver driver) {
 		this.NewShopAppObject = new NewShopAppObject(driver);
 	}
+	public void NewDress() {
+		this.NewShopAppObject.getDressButton().click();
+	}
 	public void AddDressToCart() {
 		this.NewShopAppObject.getAddDressToCartButton().click();
 	}
