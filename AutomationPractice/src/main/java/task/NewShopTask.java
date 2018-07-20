@@ -10,9 +10,7 @@ public class NewShopTask {
 	public NewShopTask (WebDriver driver) {
 		this.NewShopAppObject = new NewShopAppObject(driver);
 	}
-	public void NewDress() {
-		this.NewShopAppObject.getDressButton().click();
-	}
+	
 	public void AddDressToCart() {
 		this.NewShopAppObject.getAddDressToCartButton().click();
 	}
@@ -22,15 +20,13 @@ public class NewShopTask {
 	public void ProceedToCheckout2() {
 		this.NewShopAppObject.getProceedToCheckoutButton2().click();
 	}
-	public void EmailAddress (String email) {
+	public void EmailAddress(String email) {
 		this.NewShopAppObject.getEmailAddressTextField().sendKeys(email);
 	}
 	public void CreateAnAccount() {
 		this.NewShopAppObject.getCreateAnAccountButton().click();
 	}
-	public void Gender() {
-		this.NewShopAppObject.getMrsButton().click();
-	}
+
 	public void Name (String firstName, String lastName) {
 		this.NewShopAppObject.getFirstNameTextField().sendKeys(firstName);
 		this.NewShopAppObject.getLastNameTextField().sendKeys(lastName);
