@@ -27,15 +27,21 @@ public class NewShopTask {
 		this.NewShopAppObject.getCreateAnAccountButton().click();
 	}
 
-	public void Name (String firstName, String lastName) {
+	public void Name (String firstName, String lastName, String password) {
 		this.NewShopAppObject.getFirstNameTextField().sendKeys(firstName);
 		this.NewShopAppObject.getLastNameTextField().sendKeys(lastName);
+		this.NewShopAppObject.getPasswordTextField().sendKeys(password);
 	}
-	public void BirthDay (String day, String month, String year) {
-		new Select(this.NewShopAppObject.getdropdownDay()).selectByVisibleText(day);
-		new Select(this.NewShopAppObject.getdropdownMonth()).selectByVisibleText(month);
-		new Select(this.NewShopAppObject.getdropdownYear()).selectByVisibleText(year);
+	public void BirthDay (String day) {
+		new Select(this.NewShopAppObject.getdropdownDay()).selectByValue(day);
 	}
+	public void BirthDayMonth (String month) { 
+		new Select(this.NewShopAppObject.getdropdownMonth()).selectByValue(month);
+	}
+	public void BirthDayYear (String year) { 
+		new Select(this.NewShopAppObject.getdropdownYear()).selectByValue(year);
+	}
+	
 	public void Address (String firstNameAddress, String lastNameAddress, String adress, String city) {
 		this.NewShopAppObject.getFirstNameAddressTextField().sendKeys(firstNameAddress);
 		this.NewShopAppObject.getLastNameAddressTextField().sendKeys(lastNameAddress);
@@ -43,7 +49,7 @@ public class NewShopTask {
 		this.NewShopAppObject.getCityTextField().sendKeys(city);
 	}
 	public void State (String state) {
-		new Select(this.NewShopAppObject.getdropdownState()).selectByVisibleText(state);
+		new Select(this.NewShopAppObject.getdropdownState()).selectByValue(state);
 	}
 	public void Zip (String zip) {
 		this.NewShopAppObject.getZipTextField().sendKeys(zip);

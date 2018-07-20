@@ -37,10 +37,12 @@ public class NewShopTestCase {
 		homePage.EmailAddress("testemarinastorgatto@outlook.com");
 		Report.log(Status.INFO,"Add a new e-mail.", ScreenShot.capture(driver));
 		homePage.CreateAnAccount();
-		homePage.Name("Marina","Storgatto");
-		homePage.BirthDay("28","December","1992");
+		homePage.Name("Marina","Storgatto","senha1234");
+		homePage.BirthDay("28");
+		homePage.BirthDayMonth("12");
+		homePage.BirthDayYear("1992");
 		homePage.Address("Marina","Storgatto","Rua Dona Larissa, 45, Centro","Cidadela");
-		homePage.State("Chicago");
+		homePage.State("6");
 		homePage.Zip("54126");
 		homePage.Phone("5486512365");
 		homePage.AddresAlias("Home");

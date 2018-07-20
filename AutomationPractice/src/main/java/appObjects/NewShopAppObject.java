@@ -45,13 +45,17 @@ public class NewShopAppObject {
 		return this.driver.findElement(By.xpath("//*[@id=\"SubmitCreate\"]"));	
 	}
 	
-	
 	public WebElement getFirstNameTextField() {
-		return this.driver.findElement(By.xpath("//*[@id=\"customer_firstname\"]"));	
+		WebDriverWait wait = new WebDriverWait(this.driver, 3);
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"customer_firstname\"]")));	
 	}
 	
 	public WebElement getLastNameTextField() {
 		return this.driver.findElement(By.xpath("//*[@id=\"customer_lastname\"]"));	
+	}
+	
+	public WebElement getPasswordTextField() {
+		return this.driver.findElement(By.xpath("//*[@id=\"passwd\"]"));
 	}
 	
 	public WebElement getdropdownDay() {
